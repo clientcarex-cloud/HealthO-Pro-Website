@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Jobs — Job Openings at Our Healthcare Clients | HealthO Pro</title>
+    <meta name="description" content="Browse healthcare job openings at HealthO Pro's client hospitals, clinics, labs, and radiology centers. Find your next opportunity in healthcare.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar scrolled" id="navbar">
+    <div class="container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.png" alt="HealthO Pro">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="careers.html" class="nav-link">Careers</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li class="mobile-actions" style="display:none;">
+                <a href="healthcare-jobs.html" class="nav-btn-jobs">💼 Healthcare Jobs</a>
+                <a href="careers.html" class="nav-btn-cta">Join Our Team</a>
+            </li>
+        </ul>
+        <div class="nav-actions">
+            <a href="healthcare-jobs.html" class="nav-btn-jobs active" style="background: linear-gradient(135deg, #1A3A72 0%, #122B5C 100%); box-shadow: 0 4px 15px rgba(18,43,92,0.3);">💼 Healthcare Jobs</a>
+            <a href="careers.html" class="nav-btn-cta">Join Our Team</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="page-hero-bg">
+        <img src="assets/images/jobs-hero.png" alt="Healthcare Jobs">
+    </div>
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="container">
+        <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Healthcare Careers Portal
+        </div>
+        <h1>Discover <span class="highlight">Healthcare Jobs</span> at Our Client Facilities</h1>
+        <p>Browse open positions at leading hospitals, clinics, labs, and radiology centers powered by HealthO Pro. Find your dream healthcare role today.</p>
+    </div>
+</section>
+
+<!-- Search Bar -->
+<section class="search-bar-section">
+    <div class="container">
+        <div class="search-bar reveal">
+            <div class="search-field">
+                <label for="searchKeyword">Job Title / Keyword</label>
+                <input type="text" id="searchKeyword" placeholder="e.g. Staff Nurse, Lab Technician...">
+            </div>
+            <div class="search-field">
+                <label for="searchLocation">Location</label>
+                <input type="text" id="searchLocation" placeholder="e.g. Mumbai, Delhi NCR...">
+            </div>
+            <div class="search-field">
+                <label for="searchCategory">Category</label>
+                <select id="searchCategory">
+                    <option value="">All Categories</option>
+                    <option value="nursing">Nursing</option>
+                    <option value="doctor">Doctors / Physicians</option>
+                    <option value="lab">Laboratory</option>
+                    <option value="radiology">Radiology</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="admin">Administration</option>
+                    <option value="support">Support Staff</option>
+                </select>
+            </div>
+            <button class="search-btn" id="searchBtn">
+                🔍 Search Jobs
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Job Stats -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+            <div>
+                <h2 style="font-size: 28px; margin-bottom: 4px;">Latest Healthcare Openings</h2>
+                <p style="color: var(--gray-400); font-size: 15px;">Showing <strong style="color: var(--cyan);" id="jobCount">12</strong> active job openings across <strong style="color: var(--cyan);">8</strong> healthcare facilities</p>
+            </div>
+            <div class="jobs-filter" style="margin-bottom: 0;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hospital">Hospitals</button>
+                <button class="filter-btn" data-filter="clinic">Clinics</button>
+                <button class="filter-btn" data-filter="lab">Labs</button>
+                <button class="filter-btn" data-filter="radiology">Radiology</button>
+            </div>
+        </div>
+
+        <div class="healthcare-jobs-grid" id="hcJobsGrid">
+            <!-- Job 1 -->
+            <div class="hc-job-card reveal" data-category="hospital">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #00B4D8, #0096B7);">CH</div>
+                        <div class="hc-company-info">
+                            <h5>City Hospital</h5>
+                            <span class="company-type">Multi-Specialty Hospital</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge new">New</span>
+                </div>
+                <h4>Senior Staff Nurse — ICU</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Mumbai, Maharashtra</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 3-5 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹35,000 - ₹55,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="hc-job-card reveal" data-category="hospital">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">LM</div>
+                        <div class="hc-company-info">
+                            <h5>LifeLine Multi-Specialty</h5>
+                            <span class="company-type">Super-Specialty Hospital</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge hot">Hot</span>
+                </div>
+                <h4>Consultant — Orthopedics</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Delhi NCR</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 5-10 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹1.5L - ₹3L <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="hc-job-card reveal" data-category="lab">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #9B59B6, #8E44AD);">PC</div>
+                        <div class="hc-company-info">
+                            <h5>PathCare Labs</h5>
+                            <span class="company-type">Diagnostic Laboratory Chain</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge new">New</span>
+                </div>
+                <h4>Lab Technician — Biochemistry</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Pune, Maharashtra</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 1-3 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹18,000 - ₹28,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="hc-job-card reveal" data-category="radiology">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">RV</div>
+                        <div class="hc-company-info">
+                            <h5>RadiVision Diagnostics</h5>
+                            <span class="company-type">Radiology Center</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge featured">Featured</span>
+                </div>
+                <h4>Radiologist — MRI Specialist</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Bangalore, Karnataka</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 3-8 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹1.2L - ₹2.5L <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="hc-job-card reveal" data-category="clinic">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #F39C12, #E67E22);">MF</div>
+                        <div class="hc-company-info">
+                            <h5>MedFirst Clinics</h5>
+                            <span class="company-type">Polyclinic Chain</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge new">New</span>
+                </div>
+                <h4>General Physician — OPD</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Hyderabad, Telangana</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 2-5 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹60,000 - ₹1L <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="hc-job-card reveal" data-category="hospital">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">AC</div>
+                        <div class="hc-company-info">
+                            <h5>Apollo Care</h5>
+                            <span class="company-type">Corporate Hospital</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge hot">Hot</span>
+                </div>
+                <h4>Ward Manager — Pediatrics</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Chennai, Tamil Nadu</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 4-7 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹40,000 - ₹65,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="hc-job-card reveal" data-category="lab">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #3498DB, #2980B9);">BG</div>
+                        <div class="hc-company-info">
+                            <h5>BioGenesis Labs</h5>
+                            <span class="company-type">Research Laboratory</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge featured">Featured</span>
+                </div>
+                <h4>Microbiologist</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Noida, UP</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 2-4 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹25,000 - ₹40,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 8 -->
+            <div class="hc-job-card reveal" data-category="clinic">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #E91E63, #C2185B);">PC</div>
+                        <div class="hc-company-info">
+                            <h5>PrimeCare Clinic</h5>
+                            <span class="company-type">Specialty Clinic</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge new">New</span>
+                </div>
+                <h4>Receptionist / Front Desk Executive</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Gurgaon, Haryana</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 0-2 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹15,000 - ₹22,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 9 -->
+            <div class="hc-job-card reveal" data-category="hospital">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #00B4D8, #0096B7);">CH</div>
+                        <div class="hc-company-info">
+                            <h5>City Hospital</h5>
+                            <span class="company-type">Multi-Specialty Hospital</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge hot">Hot</span>
+                </div>
+                <h4>Pharmacist — Hospital Pharmacy</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Mumbai, Maharashtra</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 1-3 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹22,000 - ₹35,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 10 -->
+            <div class="hc-job-card reveal" data-category="radiology">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">RV</div>
+                        <div class="hc-company-info">
+                            <h5>RadiVision Diagnostics</h5>
+                            <span class="company-type">Radiology Center</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge new">New</span>
+                </div>
+                <h4>Radiology Technician — CT Scan</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Bangalore, Karnataka</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 1-3 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹20,000 - ₹32,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 11 -->
+            <div class="hc-job-card reveal" data-category="hospital">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">LM</div>
+                        <div class="hc-company-info">
+                            <h5>LifeLine Multi-Specialty</h5>
+                            <span class="company-type">Super-Specialty Hospital</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge featured">Featured</span>
+                </div>
+                <h4>Medical Records Officer</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Delhi NCR</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 1-3 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹18,000 - ₹28,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+
+            <!-- Job 12 -->
+            <div class="hc-job-card reveal" data-category="lab">
+                <div class="hc-job-header">
+                    <div class="hc-job-company">
+                        <div class="hc-company-logo" style="background: linear-gradient(135deg, #9B59B6, #8E44AD);">PC</div>
+                        <div class="hc-company-info">
+                            <h5>PathCare Labs</h5>
+                            <span class="company-type">Diagnostic Laboratory Chain</span>
+                        </div>
+                    </div>
+                    <span class="hc-job-badge hot">Hot</span>
+                </div>
+                <h4>Phlebotomist / Sample Collector</h4>
+                <div class="hc-job-details">
+                    <span class="hc-job-detail"><span class="detail-icon">📍</span> Multiple Locations</span>
+                    <span class="hc-job-detail"><span class="detail-icon">💼</span> Full-Time</span>
+                    <span class="hc-job-detail"><span class="detail-icon">🕐</span> 0-2 Yrs</span>
+                </div>
+                <div class="hc-job-footer">
+                    <div class="hc-job-salary">₹12,000 - ₹20,000 <span>/month</span></div>
+                    <a href="#" class="hc-apply-btn">Apply →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">→</button>
+        </div>
+    </div>
+</section>
+
+<!-- For Employers CTA -->
+<section class="cta-section">
+    <div class="bg-grid"></div>
+    <div class="cta-content reveal">
+        <h2>Are You a Healthcare Employer?</h2>
+        <p>Partner with HealthO Pro to list your job openings and find qualified healthcare professionals. We help you reach the right candidates through our growing network.</p>
+        <div class="cta-actions">
+            <a href="index.html#contact" class="btn btn-primary">
+                📤 Post a Job
+            </a>
+            <a href="careers.html" class="btn btn-outline">
+                Join HealthO Pro Team
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="HealthO Pro">
+                <p>Empowering Healthcare Providers with cutting-edge IT solutions and expert consultation for sustainable growth.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="index.html#service-hims">→ HIMS</a></li>
+                    <li><a href="index.html#service-lims">→ LIMS</a></li>
+                    <li><a href="index.html#service-cms">→ CMS</a></li>
+                    <li><a href="index.html#service-ris">→ RIS</a></li>
+                    <li><a href="index.html#service-consult">→ Expert Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#why-us">→ About Us</a></li>
+                    <li><a href="careers.html">→ Careers</a></li>
+                    <li><a href="healthcare-jobs.html">→ Healthcare Jobs</a></li>
+                    <li><a href="index.html#testimonials">→ Testimonials</a></li>
+                    <li><a href="index.html#contact">→ Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">→ Blog</a></li>
+                    <li><a href="#">→ Case Studies</a></li>
+                    <li><a href="#">→ Documentation</a></li>
+                    <li><a href="#">→ API Reference</a></li>
+                    <li><a href="#">→ Support Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Healthocare Private Limited. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthO Pro — Empowering Healthcare Providers | HIMS, LIMS, CMS, RIS Solutions</title>
+    <meta name="description" content="HealthO Pro provides cutting-edge healthcare IT solutions including HIMS, LIMS, CMS, RIS and Expert Consultation to accelerate Hospital, Clinic & Lab growth.">
+    <meta name="keywords" content="HIMS, LIMS, CMS, RIS, Healthcare IT, Hospital Management, Lab Management, Clinic Management">
+    <meta name="theme-color" content="#122B5C">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.png" alt="HealthO Pro">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#solutions" class="nav-link">Solutions</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#why-us" class="nav-link">Why Us</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="mobile-actions" style="display:none;">
+                <a href="healthcare-jobs.html" class="nav-btn-jobs">💼 Healthcare Jobs</a>
+                <a href="careers.html" class="nav-btn-cta">Join Our Team</a>
+            </li>
+        </ul>
+        <div class="nav-actions">
+            <a href="healthcare-jobs.html" class="nav-btn-jobs" id="navJobsBtn">💼 Healthcare Jobs</a>
+            <a href="careers.html" class="nav-btn-cta">Join Our Team</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <img src="assets/images/hero-bg.png" alt="Healthcare Technology">
+    </div>
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Empowering Healthcare Providers
+            </div>
+            <h1>Transform Your <span class="highlight">Healthcare</span> Operations with Smart IT</h1>
+            <p>HealthO Pro delivers next-generation HIMS, LIMS, CMS & RIS platforms combined with expert consultation to supercharge your Hospital, Clinic & Lab growth.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    Schedule a Demo
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#solutions" class="btn btn-outline">
+                    Explore Solutions
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="number" data-count="150">0</span>
+                    <span class="label">Healthcare Clients</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="number" data-count="98">0</span>
+                    <span class="label">% Satisfaction Rate</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="number" data-count="24">0</span>
+                    <span class="label">/7 Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-visual-wrapper">
+                <img src="assets/images/hims.png" alt="HealthO Pro Dashboard">
+                <div class="hero-float-card card-1">
+                    <div class="card-icon cyan">🏥</div>
+                    <div class="card-info">
+                        <div class="card-title">Smart Dashboard</div>
+                        <div class="card-desc">Real-time analytics</div>
+                    </div>
+                </div>
+                <div class="hero-float-card card-2">
+                    <div class="card-icon green">✅</div>
+                    <div class="card-info">
+                        <div class="card-title">Compliance Ready</div>
+                        <div class="card-desc">NABH & NABL Aligned</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="container">
+    <div class="stats-bar reveal">
+        <div class="stat-item">
+            <div class="stat-number"><span data-count="150">0</span>+</div>
+            <div class="stat-label">Healthcare Facilities Served</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span data-count="5">0</span>M+</div>
+            <div class="stat-label">Patient Records Managed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span data-count="99">0</span>.9%</div>
+            <div class="stat-label">System Uptime</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span data-count="10">0</span>+</div>
+            <div class="stat-label">Years of Excellence</div>
+        </div>
+    </div>
+</div>
+
+<!-- Solutions Overview -->
+<section class="section" id="solutions">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Our Solutions</span>
+            <h2>Comprehensive Healthcare IT Ecosystem</h2>
+            <p>End-to-end digital solutions designed specifically for hospitals, clinics, labs, and radiology centers to streamline operations and enhance patient care.</p>
+        </div>
+        <div class="services-grid reveal-stagger">
+            <div class="service-card" style="transition-delay: 0.1s">
+                <div class="service-icon hims">🏥</div>
+                <h3>HIMS</h3>
+                <span class="service-full-name">Hospital Information Management System</span>
+                <p>Complete hospital digitization — from OPD/IPD management to billing, pharmacy, and analytics.</p>
+                <div class="service-features">
+                    <div class="service-feature"><span class="check">✓</span> OPD & IPD Management</div>
+                    <div class="service-feature"><span class="check">✓</span> Billing & Revenue Cycle</div>
+                    <div class="service-feature"><span class="check">✓</span> EMR / EHR Integration</div>
+                </div>
+                <a href="#service-hims" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" style="transition-delay: 0.15s">
+                <div class="service-icon lims">🔬</div>
+                <h3>LIMS</h3>
+                <span class="service-full-name">Laboratory Information Management System</span>
+                <p>Automate your lab from sample collection to report generation with barcode-driven workflows.</p>
+                <div class="service-features">
+                    <div class="service-feature"><span class="check">✓</span> Sample Tracking & Barcoding</div>
+                    <div class="service-feature"><span class="check">✓</span> Auto Report Generation</div>
+                    <div class="service-feature"><span class="check">✓</span> Equipment Integration</div>
+                </div>
+                <a href="#service-lims" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" style="transition-delay: 0.2s">
+                <div class="service-icon cms">🩺</div>
+                <h3>CMS</h3>
+                <span class="service-full-name">Clinic Management System</span>
+                <p>Streamline clinic operations with smart scheduling, patient management, and digital prescriptions.</p>
+                <div class="service-features">
+                    <div class="service-feature"><span class="check">✓</span> Appointment Scheduling</div>
+                    <div class="service-feature"><span class="check">✓</span> Digital Prescriptions</div>
+                    <div class="service-feature"><span class="check">✓</span> Patient Portal</div>
+                </div>
+                <a href="#service-cms" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" style="transition-delay: 0.25s">
+                <div class="service-icon ris">📡</div>
+                <h3>RIS</h3>
+                <span class="service-full-name">Radiology Information System</span>
+                <p>Advanced imaging workflow management with PACS integration and AI-powered diagnostics support.</p>
+                <div class="service-features">
+                    <div class="service-feature"><span class="check">✓</span> PACS Integration</div>
+                    <div class="service-feature"><span class="check">✓</span> Modality Worklist</div>
+                    <div class="service-feature"><span class="check">✓</span> DICOM Viewer</div>
+                </div>
+                <a href="#service-ris" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" style="transition-delay: 0.3s; grid-column: span 2;">
+                <div class="service-icon consult">🎯</div>
+                <h3>Expert Consultation</h3>
+                <span class="service-full-name">Healthcare Business Growth Advisory</span>
+                <p>Strategic consulting services to help your Hospital, Clinic, or Lab achieve sustainable growth through operational excellence, digital transformation, and market positioning.</p>
+                <div class="service-features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div class="service-feature"><span class="check">✓</span> Revenue Optimization</div>
+                    <div class="service-feature"><span class="check">✓</span> Accreditation (NABH/NABL)</div>
+                    <div class="service-feature"><span class="check">✓</span> Digital Marketing Strategy</div>
+                    <div class="service-feature"><span class="check">✓</span> Operational Efficiency Audit</div>
+                </div>
+                <a href="#service-consult" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Services -->
+<section id="services">
+    <div class="service-detail" id="service-hims">
+        <div class="container">
+            <div class="service-detail-content reveal-left">
+                <span class="section-label">HIMS</span>
+                <h3>Hospital Information Management System</h3>
+                <p class="subtitle">Complete Hospital Digitization Platform</p>
+                <p>Our HIMS transforms hospital operations with a unified platform covering every department — from front desk to pharmacy, from OT scheduling to discharge summaries. Built for multi-specialty hospitals and designed for NABH compliance.</p>
+                <div class="detail-features">
+                    <div class="detail-feature"><span class="feat-icon">📋</span><span class="feat-text">OPD & IPD Management</span></div>
+                    <div class="detail-feature"><span class="feat-icon">💰</span><span class="feat-text">Billing & Insurance</span></div>
+                    <div class="detail-feature"><span class="feat-icon">💊</span><span class="feat-text">Pharmacy & Inventory</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🩹</span><span class="feat-text">OT & Nursing Module</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📊</span><span class="feat-text">MIS & Analytics</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🔐</span><span class="feat-text">Role-Based Access</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+            <div class="service-detail-image reveal-right">
+                <img src="assets/images/hims.png" alt="HIMS Dashboard" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="service-detail" id="service-lims">
+        <div class="container">
+            <div class="service-detail-content reveal-left">
+                <span class="section-label">LIMS</span>
+                <h3>Laboratory Information Management System</h3>
+                <p class="subtitle">Smart Lab Automation Platform</p>
+                <p>From sample registration to report delivery — our LIMS automates every step of the laboratory workflow. Supports barcode-based tracking, equipment interfacing, and multi-branch operations. Designed for NABL compliance.</p>
+                <div class="detail-features">
+                    <div class="detail-feature"><span class="feat-icon">🧪</span><span class="feat-text">Sample Tracking</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🏷️</span><span class="feat-text">Barcode Integration</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📄</span><span class="feat-text">Smart Report Templates</span></div>
+                    <div class="detail-feature"><span class="feat-icon">⚙️</span><span class="feat-text">Machine Interfacing</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🌐</span><span class="feat-text">Multi-Branch Support</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📱</span><span class="feat-text">Patient App & Reports</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+            <div class="service-detail-image reveal-right">
+                <img src="assets/images/lims.png" alt="LIMS Dashboard" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="service-detail" id="service-cms">
+        <div class="container">
+            <div class="service-detail-content reveal-left">
+                <span class="section-label">CMS</span>
+                <h3>Clinic Management System</h3>
+                <p class="subtitle">Effortless Clinic Operations</p>
+                <p>Purpose-built for clinics and polyclinics — manage appointments, patient records, prescriptions, billing, and follow-ups from a single intuitive platform. Includes a patient-facing portal for enhanced engagement.</p>
+                <div class="detail-features">
+                    <div class="detail-feature"><span class="feat-icon">📅</span><span class="feat-text">Smart Scheduling</span></div>
+                    <div class="detail-feature"><span class="feat-icon">💉</span><span class="feat-text">Digital Prescriptions</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📂</span><span class="feat-text">Patient Records</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🔔</span><span class="feat-text">Reminders & Follow-ups</span></div>
+                    <div class="detail-feature"><span class="feat-icon">💳</span><span class="feat-text">Billing & Invoicing</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📈</span><span class="feat-text">Growth Analytics</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+            <div class="service-detail-image reveal-right">
+                <img src="assets/images/cms.png" alt="CMS Dashboard" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="service-detail" id="service-ris">
+        <div class="container">
+            <div class="service-detail-content reveal-left">
+                <span class="section-label">RIS</span>
+                <h3>Radiology Information System</h3>
+                <p class="subtitle">Advanced Imaging Workflow Manager</p>
+                <p>Optimize your radiology department with end-to-end imaging workflow management. Seamless PACS integration, DICOM viewing, modality worklists, and AI-assisted diagnostics to improve turnaround time and accuracy.</p>
+                <div class="detail-features">
+                    <div class="detail-feature"><span class="feat-icon">🖥️</span><span class="feat-text">PACS Integration</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📷</span><span class="feat-text">DICOM Viewer</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📝</span><span class="feat-text">Structured Reporting</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🤖</span><span class="feat-text">AI Diagnostics</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📡</span><span class="feat-text">Modality Worklists</span></div>
+                    <div class="detail-feature"><span class="feat-icon">☁️</span><span class="feat-text">Cloud Archive</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Request Demo</a>
+            </div>
+            <div class="service-detail-image reveal-right">
+                <img src="assets/images/ris.png" alt="RIS Dashboard" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="service-detail" id="service-consult">
+        <div class="container">
+            <div class="service-detail-content reveal-left">
+                <span class="section-label">Expert Consultation</span>
+                <h3>Healthcare Growth Consulting</h3>
+                <p class="subtitle">Drive Sustainable Business Growth</p>
+                <p>Our team of healthcare industry veterans provides strategic consulting to help your organization grow sustainably. From accreditation readiness to digital marketing, from operational audits to revenue optimization — we guide you every step of the way.</p>
+                <div class="detail-features">
+                    <div class="detail-feature"><span class="feat-icon">📋</span><span class="feat-text">NABH/NABL Readiness</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📈</span><span class="feat-text">Revenue Growth Strategy</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🔍</span><span class="feat-text">Operational Audit</span></div>
+                    <div class="detail-feature"><span class="feat-icon">📢</span><span class="feat-text">Digital Marketing</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🤝</span><span class="feat-text">Vendor Management</span></div>
+                    <div class="detail-feature"><span class="feat-icon">🎓</span><span class="feat-text">Staff Training</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+            </div>
+            <div class="service-detail-image reveal-right">
+                <img src="assets/images/consultation.png" alt="Expert Consultation" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section-dark" id="why-us">
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Why HealthO Pro</span>
+            <h2>Built for Healthcare, Trusted by Providers</h2>
+            <p>We don't just build software — we build partnerships that transform healthcare delivery and drive measurable growth.</p>
+        </div>
+        <div class="why-grid reveal-stagger">
+            <div class="why-card"><div class="why-card-icon">🏆</div><h4>Domain Expertise</h4><p>10+ years of deep healthcare IT experience across hospitals, labs, and clinics of all sizes.</p></div>
+            <div class="why-card"><div class="why-card-icon">⚡</div><h4>Rapid Deployment</h4><p>Go live in weeks, not months. Our pre-configured modules accelerate your digital transformation.</p></div>
+            <div class="why-card"><div class="why-card-icon">🛡️</div><h4>HIPAA & Compliance</h4><p>Enterprise-grade security with HIPAA, NABH & NABL compliance baked into every solution.</p></div>
+            <div class="why-card"><div class="why-card-icon">🔄</div><h4>Seamless Integration</h4><p>Connect with existing EMR, EHR, PACS, and third-party systems through robust APIs.</p></div>
+            <div class="why-card"><div class="why-card-icon">📞</div><h4>24/7 Support</h4><p>Dedicated support team available round the clock with guaranteed response times.</p></div>
+            <div class="why-card"><div class="why-card-icon">☁️</div><h4>Cloud & On-Premise</h4><p>Flexible deployment options — choose cloud, on-premise, or hybrid based on your needs.</p></div>
+            <div class="why-card"><div class="why-card-icon">📊</div><h4>Advanced Analytics</h4><p>Powerful dashboards and reports to make data-driven decisions and optimize outcomes.</p></div>
+            <div class="why-card"><div class="why-card-icon">🚀</div><h4>Scalable Architecture</h4><p>From a single clinic to a multi-facility chain — our solutions scale with your growth.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">How It Works</span>
+            <h2>Your Journey to Digital Excellence</h2>
+            <p>A proven 4-step methodology to transform your healthcare operations with minimal disruption.</p>
+        </div>
+        <div class="process-grid reveal-stagger">
+            <div class="process-step"><div class="process-number">1</div><h4>Discovery</h4><p>We study your workflows, pain-points, and goals through detailed consultations and site visits.</p></div>
+            <div class="process-step"><div class="process-number">2</div><h4>Customization</h4><p>We tailor our solutions to fit your specific requirements, branding, and regulatory needs.</p></div>
+            <div class="process-step"><div class="process-number">3</div><h4>Deployment</h4><p>Rapid implementation with data migration, staff training, and parallel-run support.</p></div>
+            <div class="process-step"><div class="process-number">4</div><h4>Growth</h4><p>Ongoing optimization, new feature rollouts, and strategic consultation for continuous growth.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section section-light" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Testimonials</span>
+            <h2>Trusted by Healthcare Leaders</h2>
+            <p>Hear from our clients who have transformed their operations with HealthO Pro solutions.</p>
+        </div>
+        <div class="testimonials-grid reveal-stagger">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"HealthO Pro's HIMS transformed our hospital operations completely. We reduced billing errors by 85% and improved patient satisfaction scores dramatically."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DR</div>
+                    <div class="testimonial-info"><h5>Dr. Rajesh Sharma</h5><p>MD, City Hospital</p></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The LIMS solution cut our report turnaround time by 60%. The barcode integration and machine interfacing work flawlessly. Best investment for our lab."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AP</div>
+                    <div class="testimonial-info"><h5>Dr. Anita Patel</h5><p>Director, PathCare Labs</p></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Their expert consultation helped us achieve NABH accreditation in record time. The team's domain expertise and hands-on approach is unmatched."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SK</div>
+                    <div class="testimonial-info"><h5>Mr. Suresh Kumar</h5><p>CEO, LifeLine Multi-Specialty</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Marquee -->
+<section class="clients-section">
+    <div class="container">
+        <p style="text-align: center; font-size: 12px; color: var(--gray-400); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 32px;">Trusted by leading healthcare institutions</p>
+    </div>
+    <div style="overflow: hidden;">
+        <div class="clients-marquee" id="clientsMarquee">
+            <span class="client-logo">🏥 City Hospital</span>
+            <span class="client-logo">🔬 PathCare Labs</span>
+            <span class="client-logo">🏥 LifeLine Multi-Specialty</span>
+            <span class="client-logo">🩺 MedFirst Clinics</span>
+            <span class="client-logo">📡 RadiVision Diagnostics</span>
+            <span class="client-logo">🏥 Apollo Care</span>
+            <span class="client-logo">🔬 BioGenesis Labs</span>
+            <span class="client-logo">🩺 PrimeCare Clinic</span>
+            <span class="client-logo">🏥 City Hospital</span>
+            <span class="client-logo">🔬 PathCare Labs</span>
+            <span class="client-logo">🏥 LifeLine Multi-Specialty</span>
+            <span class="client-logo">🩺 MedFirst Clinics</span>
+            <span class="client-logo">📡 RadiVision Diagnostics</span>
+            <span class="client-logo">🏥 Apollo Care</span>
+            <span class="client-logo">🔬 BioGenesis Labs</span>
+            <span class="client-logo">🩺 PrimeCare Clinic</span>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">Get in Touch</span>
+            <h2>Ready to Transform Your Healthcare Operations?</h2>
+            <p>Schedule a free consultation with our healthcare IT experts and discover how HealthO Pro can accelerate your growth.</p>
+        </div>
+        <div class="contact-form-wrapper">
+            <div class="contact-info-card reveal-left">
+                <h3>Let's Connect</h3>
+                <p>Our team is ready to understand your needs and provide the right solution.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📧</div>
+                        <div class="contact-detail-text"><h5>Email Us</h5><p>info@healthopro.com</p></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📞</div>
+                        <div class="contact-detail-text"><h5>Call Us</h5><p>+91 (800) 123-4567</p></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📍</div>
+                        <div class="contact-detail-text"><h5>Visit Us</h5><p>Tech Hub, Sector 62, Noida, UP, India</p></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">⏰</div>
+                        <div class="contact-detail-text"><h5>Working Hours</h5><p>Mon - Sat: 9:00 AM - 7:00 PM</p></div>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form reveal-right" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group"><label for="fullName">Full Name *</label><input type="text" id="fullName" placeholder="John Doe" required></div>
+                    <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="john@hospital.com" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="+91 98765 43210"></div>
+                    <div class="form-group">
+                        <label for="orgType">Organization Type</label>
+                        <select id="orgType">
+                            <option value="">Select Type</option>
+                            <option value="hospital">Hospital</option>
+                            <option value="clinic">Clinic / Polyclinic</option>
+                            <option value="lab">Laboratory</option>
+                            <option value="radiology">Radiology Center</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Interested In</label>
+                    <select id="interest">
+                        <option value="">Select Solution</option>
+                        <option value="hims">HIMS — Hospital Information Management</option>
+                        <option value="lims">LIMS — Laboratory Information Management</option>
+                        <option value="cms">CMS — Clinic Management System</option>
+                        <option value="ris">RIS — Radiology Information System</option>
+                        <option value="consultation">Expert Consultation</option>
+                        <option value="multiple">Multiple Solutions</option>
+                    </select>
+                </div>
+                <div class="form-group"><label for="message">Your Message</label><textarea id="message" placeholder="Tell us about your requirements..."></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width: 100;">
+                    Send Message
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="bg-grid"></div>
+    <div class="cta-content reveal">
+        <h2>Start Your Digital Transformation Today</h2>
+        <p>Join 150+ healthcare providers who switched to HealthO Pro and achieved measurable results. Get started with a free demo.</p>
+        <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary">Schedule Free Demo</a>
+            <a href="healthcare-jobs.html" class="btn btn-green">💼 Healthcare Jobs</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="HealthO Pro">
+                <p>Empowering Healthcare Providers with cutting-edge IT solutions and expert consultation for sustainable growth.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="#service-hims">→ HIMS</a></li>
+                    <li><a href="#service-lims">→ LIMS</a></li>
+                    <li><a href="#service-cms">→ CMS</a></li>
+                    <li><a href="#service-ris">→ RIS</a></li>
+                    <li><a href="#service-consult">→ Expert Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#why-us">→ About Us</a></li>
+                    <li><a href="careers.html">→ Careers</a></li>
+                    <li><a href="healthcare-jobs.html">→ Healthcare Jobs</a></li>
+                    <li><a href="#testimonials">→ Testimonials</a></li>
+                    <li><a href="#contact">→ Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">→ Blog</a></li>
+                    <li><a href="#">→ Case Studies</a></li>
+                    <li><a href="#">→ Documentation</a></li>
+                    <li><a href="#">→ API Reference</a></li>
+                    <li><a href="#">→ Support Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Healthocare Private Limited. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
