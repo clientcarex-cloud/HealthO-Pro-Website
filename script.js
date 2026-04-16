@@ -347,13 +347,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 } catch (e) {
                     result = { status: 'error', message: 'Server error: ' + textResp };
                 }
+
+                // Render Logs Helper
+                const logsHtml = result.log ? `<div style="margin-top: 15px; padding: 10px; background: #1a1a2e; color: #00ffcc; font-family: monospace; font-size: 12px; border-radius: 5px; white-space: pre-wrap; font-weight: normal; overflow-x: auto; max-height: 200px; overflow-y: auto;"><b>PHP Mail Logs:</b><br>${result.log}</div>` : '';
                 
                 if (response.ok && result.status === 'success') {
                     btn.innerHTML = '✓ Message Sent Successfully!';
                     btn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
                     
                     if(msgDiv) {
-                        msgDiv.innerHTML = 'Your message has been sent successfully.';
+                        msgDiv.innerHTML = 'Your message has been sent successfully.' + logsHtml;
                         msgDiv.style.color = '#27AE60';
                     }
 
@@ -361,7 +364,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.innerHTML = orig;
                         btn.style.background = '';
                         btn.disabled = false;
-                        if(msgDiv) msgDiv.innerHTML = '';
+                        // Keep logs visible
+                        // if(msgDiv) msgDiv.innerHTML = ''; 
                         form.reset();
                     }, 5000);
                 } else {
@@ -369,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
                     
                     if(msgDiv) {
-                        msgDiv.innerHTML = result.message || 'Error sending message';
+                        msgDiv.innerHTML = (result.message || 'Error sending message') + logsHtml;
                         msgDiv.style.color = '#E74C3C';
                     }
 

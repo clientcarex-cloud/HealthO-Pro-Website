@@ -36,6 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // This sets the Return-Path (-f flag in sendmail), critical for many shared hosts like Hostinger/GoDaddy
         $mail->Sender = 'info@healtho.pro';
         
+        $debugLog = '';
+        $mail->SMTPDebug = 4;
+        $mail->Debugoutput = function($str, $level) use (&$debugLog) {
+            $debugLog .= htmlspecialchars($str) . "<br>";
+        };
+
         // Where the form notifications should go
         $mail->addAddress('digicarelynx@gmail.com');
         $mail->addAddress('info@healtho.in');
@@ -56,12 +62,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
         http_response_code(200);
-        echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully.']);
+        
+        // If debug log is empty, mail() accepted it but gave no logs.
+        if (empty($debugLog)) {
+            $debugLog = "Mail function returned TRUE (Success form the PHP side), but no SMTP debug logs available because isMail() is being used. If emails aren't arriving, the Server's internal mail router is blocking them.";
+        }
+
+        echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully.', 'log' => $debugLog]);
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode([
             'status' => 'error', 
-            'message' => "Server Mail Error: {$mail->ErrorInfo}"
+            'message' => "Server Mail Error: {$mail->ErrorInfo}",
+            'log' => $debugLog
         ]);
     }
 } else {
