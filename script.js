@@ -319,6 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // CONTACT FORM
     // ============================
     const form = document.getElementById('contactForm');
+    const msgDiv = document.getElementById('formMessage');
     if (form) {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -326,6 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const orig = btn.innerHTML;
             btn.innerHTML = 'Sending...';
             btn.disabled = true;
+            if (msgDiv) {
+                msgDiv.innerHTML = '';
+                msgDiv.style.color = '';
+            }
 
             const formData = new FormData(form);
 
@@ -335,34 +340,59 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: formData
                 });
                 
-                const result = await response.json();
+                let result;
+                const textResp = await response.text();
+                try {
+                    result = JSON.parse(textResp);
+                } catch (e) {
+                    result = { status: 'error', message: 'Server error: ' + textResp };
+                }
                 
                 if (response.ok && result.status === 'success') {
                     btn.innerHTML = '✓ Message Sent Successfully!';
                     btn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    
+                    if(msgDiv) {
+                        msgDiv.innerHTML = 'Your message has been sent successfully.';
+                        msgDiv.style.color = '#27AE60';
+                    }
+
                     setTimeout(() => {
                         btn.innerHTML = orig;
                         btn.style.background = '';
                         btn.disabled = false;
+                        if(msgDiv) msgDiv.innerHTML = '';
                         form.reset();
-                    }, 3000);
+                    }, 5000);
                 } else {
-                    btn.innerHTML = '❌ ' + (result.message || 'Error sending message');
+                    btn.innerHTML = '❌ Failed';
                     btn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                    
+                    if(msgDiv) {
+                        msgDiv.innerHTML = result.message || 'Error sending message';
+                        msgDiv.style.color = '#E74C3C';
+                    }
+
                     setTimeout(() => {
                         btn.innerHTML = orig;
                         btn.style.background = '';
                         btn.disabled = false;
-                    }, 4000);
+                    }, 5000);
                 }
             } catch (error) {
                 btn.innerHTML = '❌ Network Error';
                 btn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                
+                if(msgDiv) {
+                    msgDiv.innerHTML = 'Network error or PHP script failed to execute. Details: ' + error.message;
+                    msgDiv.style.color = '#E74C3C';
+                }
+
                 setTimeout(() => {
                     btn.innerHTML = orig;
                     btn.style.background = '';
                     btn.disabled = false;
-                }, 4000);
+                }, 5000);
             }
         });
     }
