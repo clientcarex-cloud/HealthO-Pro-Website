@@ -320,19 +320,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button[type="submit"]');
             const orig = btn.innerHTML;
-            btn.innerHTML = '✓ Message Sent Successfully!';
-            btn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+            btn.innerHTML = 'Sending...';
             btn.disabled = true;
-            setTimeout(() => {
-                btn.innerHTML = orig;
-                btn.style.background = '';
-                btn.disabled = false;
-                form.reset();
-            }, 3000);
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('contact.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.status === 'success') {
+                    btn.innerHTML = '✓ Message Sent Successfully!';
+                    btn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    setTimeout(() => {
+                        btn.innerHTML = orig;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                        form.reset();
+                    }, 3000);
+                } else {
+                    btn.innerHTML = '❌ ' + (result.message || 'Error sending message');
+                    btn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                    setTimeout(() => {
+                        btn.innerHTML = orig;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 4000);
+                }
+            } catch (error) {
+                btn.innerHTML = '❌ Network Error';
+                btn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                setTimeout(() => {
+                    btn.innerHTML = orig;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 4000);
+            }
         });
     }
 
