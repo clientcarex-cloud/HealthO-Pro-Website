@@ -25,23 +25,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings
-        // If SMTP is needed, uncomment and configure these lines
-        // $mail->isSMTP();
-        // $mail->Host       = 'smtp.example.com';
-        // $mail->SMTPAuth   = true;
-        // $mail->Username   = 'user@example.com';
-        // $mail->Password   = 'secret';
-        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        // $mail->Port       = 465;
-
-        // Use the native mail() function
+        // PERMANENT SOLUTION: Native PHP Server Mail
         $mail->isMail();
-
-        // Recipients
+        
+        // IMPORTANT: For native PHP mail() to work reliably and avoid spam filters, 
+        // the 'From' address MUST use the same domain as your website.
         $mail->setFrom('info@healtho.pro', 'HealthO Pro Form');
         $mail->addReplyTo($email, $fullName);
         
+        // This sets the Return-Path (-f flag in sendmail), critical for many shared hosts like Hostinger/GoDaddy
+        $mail->Sender = 'info@healtho.pro';
+        
+        // Where the form notifications should go
         $mail->addAddress('digicarelynx@gmail.com');
         $mail->addAddress('info@healtho.in');
         $mail->addAddress('info@healtho.pro');
@@ -64,7 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully.']);
     } catch (Exception $e) {
         http_response_code(500);
-        echo json_encode(['status' => 'error', 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+        echo json_encode([
+            'status' => 'error', 
+            'message' => "Server Mail Error: {$mail->ErrorInfo}"
+        ]);
     }
 } else {
     http_response_code(403);
